@@ -1,0 +1,90 @@
+/**
+ * @file
+ * Component CSS styles for the ISU theme
+ *
+ * Styles are built from a mobile-first strategy with base styles default for
+ * mobile and then Bootstrap 4 media queries to tweak styles for larger
+ * devices.
+ *
+ * 01 LAYOUT
+ * 02 SITE NAVBAR
+ *    - ISU WORDMARK
+ *    - SEARCH
+ *    - SITE LINKS MENU
+ * 03 ISU MENU NAVBAR
+ * 04 PAGE
+ *    - Submitted by
+ *    - Pagination
+ * 05 NODE
+ * 06 BLOCKS
+ * 07 VIEWS
+ *    - ISU list view
+ *    - Summary unformatted
+ * 08 FIELDS
+ *    - Tags
+ * 09 COMPONENTS
+ *    - Breadcrumbs
+ *    - Links
+ *    - Unsaved changes alerts
+ * 10 COMMENTS
+ * 11 FORMS
+ *    - Summary
+ *    - Checkboxes
+ *    - Radios
+ *    - Date
+ *    - Text fields with text format filter
+ *    - File or file upload
+ *    - Submit buttons
+ * 12 SEARCH RESULTS
+ * 13 FOOTER
+ *    - Associates menu
+ *    - Social media menu
+ *    - Legal menu
+ * 14 BOOK
+ * 15 FORUM
+ * 16 CONTENT
+ * 17 CONTENT EDITING
+ * 18 ADMIN
+ *
+ */
+
+/* --------------------------------------  */
+/* ## LAYOUT
+/* --------------------------------------  */
+
+/* --- ## Push the footer down --- */
+html,
+body,
+.dialog-off-canvas-main-canvas, /* via settings_tray module */
+.isu-page-wrap {
+  height: 100%;
+}
+.isu-page-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.isu-site-navbar {
+  flex-shrink: 0;
+}
+.isu-main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.isu-footer {
+  flex-shrink: 0;
+}
+
+/* --------------------------------------  */
+/* ## SITE NAVBAR
+/* --------------------------------------  */
+/*
+ * Red ISU Header. Markup found in site-navbar.html.twig
+ */
+
+.isu-site-navbar {
+  padding: 0.75rem 0;
+  background-color: #EC070E;
+  border-bottom: 9px solid #085C24;
+}
+
