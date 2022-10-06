@@ -1,0 +1,219 @@
+{#
+/**
+ * @file
+ * Parital template to include the footer and its regions.
+ *
+ * Regions:
+ * - page.footer_first: Items for first footer region
+ * - page.footer_second: Items for second footer region
+ * - page.footer_third: Items for third footer region
+ * - page.footer_fourth: Items for fourth footer region
+ * - page.sign_off: For small end-of-page items.
+ *
+ */
+#}
+
+<footer class="isu-footer" aria-label="Footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-6 col-md-6 col-lg-3">
+
+        {% if iastate_footer_logo_path %}
+          <div class="mb-3">
+            {% if iastate_footer_logo_url %}
+              <a href="{{ iastate_footer_logo_url }}">
+            {% endif %}
+                <img class="isu-footer-logo" {% if iastate_footer_logo_width %} width="{{iastate_footer_logo_width }}"{% else %}width="180"{% endif %} {% if iastate_footer_logo_height %} height="{{ iastate_footer_logo_height }}"{% else %}height="58"{% endif %} src="{{ base_path }}{{ iastate_footer_logo_path }}" class="wordmark-isu" {% if iastate_footer_logo_alt %} alt="{{ iastate_footer_logo_alt }}" {% else %} alt="Iowa State University logo" {% endif %}>
+            {% if iastate_footer_logo_url %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if iastate_associate1_title or iastate_associate1_url %}
+          <div class="mb-3">
+            <h2 class="visually-hidden" id="footerassociatesmenu">Associates</h2>
+            <ul class="isu-associates-menu">
+              {% if iastate_associate1_title %}
+                <li>
+                  {% if iastate_associate1_url %}
+                    <a href="{{ iastate_associate1_url }}">{{ iastate_associate1_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate1_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if iastate_associate2_title %}
+                <li>
+                  {% if iastate_associate2_url %}
+                    <a href="{{ iastate_associate2_url }}">{{ iastate_associate2_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate2_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if iastate_associate3_title %}
+                <li>
+                  {% if iastate_associate3_url %}
+                    <a href="{{ iastate_associate3_url }}">{{ iastate_associate3_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate3_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if iastate_associate4_title %}
+                <li>
+                  {% if iastate_associate4_url %}
+                    <a href="{{ iastate_associate4_url }}">{{ iastate_associate4_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate4_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if iastate_associate5_title %}
+                <li>
+                  {% if iastate_associate5_url %}
+                    <a href="{{ iastate_associate5_url }}">{{ iastate_associate5_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate5_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if iastate_associate6_title %}
+                <li>
+                  {% if iastate_associate6_url %}
+                    <a href="{{ iastate_associate6_url }}">{{ iastate_associate6_title }}</a>
+                  {% else %}
+                    <span>{{ iastate_associate6_title }}</span>
+                  {% endif %}
+                </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if page.footer_first %}
+          {{ page.footer_first }}
+        {% endif %}
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-3">
+
+        {% if
+          iastate_contact_title or 
+          iastate_contact_address or 
+          iastate_contact_email or 
+          iastate_contact_phone or 
+          iastate_contact_phone 
+        %}
+          <div class="mb-3">
+
+            {% if iastate_contact_title %}
+              <h2 class="isu-footer_contact-title" id="footercontact">
+                {{ iastate_contact_title|nl2br }}
+              </h2>
+            {% else %}
+              <h2 class="visually-hidden" id="footercontact">Contact</h2>
+            {% endif %}
+            {% if iastate_contact_address %}
+              <div class="isu-footer_contact-address">
+                {{ iastate_contact_address|nl2br }}
+              </div>
+            {% endif %}
+
+            {% if iastate_contact_email %}
+              <div class="isu-footer_contact-email">
+                <a href="mailto:{{ iastate_contact_email }}">{{ iastate_contact_email }}</a>
+              </div>
+            {% endif %}
+
+            {% if iastate_contact_phone %}
+              <div class="isu-footer_contact-phone">
+                <span>Phone: {{ iastate_contact_phone }}</span>
+              </div>
+            {% endif %}
+
+            {% if iastate_contact_fax %}
+              <div class="isu-footer_contact-fax">
+                <span>Fax: {{ iastate_contact_fax }}</span>
+              </div>
+            {% endif %}
+          </div>
+
+        {% endif %}
+
+        {% if page.footer_second %}
+          {{ page.footer_second }}
+        {% endif %}
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-3">
+
+        {% if iastate_social1_title or iastate_social1_url %}
+          <div>
+            <h2 class="visually-hidden" id="footersocialmenu">Social media</h2>
+            <ul class="isu-social-menu">
+              {% if iastate_social1_title %}
+                <li><a href="{{ iastate_social1_url }}">{{ iastate_social1_title }}</a></li>
+              {% endif %}
+              {% if iastate_social2_title %}
+                <li><a href="{{ iastate_social2_url }}">{{ iastate_social2_title }}</a></li>
+              {% endif %}
+              {% if iastate_social3_title %}
+                <li><a href="{{ iastate_social3_url }}">{{ iastate_social3_title }}</a></li>
+              {% endif %}
+              {% if iastate_social4_title %}
+                <li><a href="{{ iastate_social4_url }}">{{ iastate_social4_title }}</a></li>
+              {% endif %}
+              {% if iastate_social5_title %}
+                <li><a href="{{ iastate_social5_url }}">{{ iastate_social5_title }}</a></li>
+              {% endif %}
+              {% if iastate_social6_title %}
+                <li><a href="{{ iastate_social6_url }}">{{ iastate_social6_title }}</a></li>
+              {% endif %}
+              {% if iastate_social7_title %}
+                <li><a href="{{ iastate_social7_url }}">{{ iastate_social7_title }}</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if page.footer_third %}
+          {{ page.footer_third }}
+        {% endif %}
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-3">
+
+        {% if iastate_copyright_hidden %}
+          {# Show nothing if the copyright is hidden #}
+        {% else %}
+          <div class="mb-3">
+            <h2 class="visually-hidden">Copyright Information</h2>
+
+            <p class="isu-copyright">Copyright © <script>document.write(new Date().getFullYear());</script><br>Boone Community School District<br>All rights reserved.</p>
+
+            <h2 class="visually-hidden">Legal and Privacy Links</h2>
+            <ul class="isu-legal-menu">
+              <li><a href="https://simbli.eboardsolutions.com/Policy/ViewPolicy.aspx?S=36031109&revid=HC4vOr3MWwH5uskVslshXq5hg==&ptid=slshEWxu3ROX8Xy8FCkuzrJ5A==&secid=&PG=6&IRP=0">Non-discrimination Policy</a></li>
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if page.footer_fourth %}
+          {{ page.footer_fourth }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% if page.sign_off %}
+    <div class="isu-sign-off_wrapper">
+      <div class="container">
+        {{ page.sign_off }}
+      </div>
+    </div>
+  {% endif %}
+</footer>
