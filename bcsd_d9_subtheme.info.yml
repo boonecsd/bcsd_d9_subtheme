@@ -6,7 +6,7 @@ core_version_requirement: ^8 || ^9
 version: "1.7.7"
 base theme: iastate_theme
 libraries-override:
-  - bcsd_d9_subtheme/global-css
+  - bcsd_d9_subtheme/global-styling
 libraries:
   - iastate_theme/global-css
   - iastate_theme/global-js
