@@ -5,8 +5,9 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 version: "1.7.7"
 base theme: iastate_theme
+libraries-override:
+  - bcsd_d9_subtheme/global-styling
 libraries:
-  - bcsd_d9_subtheme/global-styling 
   - iastate_theme/global-css
   - iastate_theme/global-js
   - iastate_theme/fonts
