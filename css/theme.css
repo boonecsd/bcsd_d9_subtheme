@@ -1,6 +1,6 @@
 /**
  * @file
- * Component CSS styles for the ISU theme
+ * Component CSS styles for the BCSD Sub theme
  *
  * Styles are built from a mobile-first strategy with base styles default for
  * mobile and then Bootstrap 4 media queries to tweak styles for larger
@@ -84,7 +84,7 @@ body,
 
 .isu-site-navbar {
   padding: 0.75rem 0;
-  background-color: #ec070e;
-  border-bottom: 9px solid #085c24;
+  background-color: #ec070e !important;
+  border-bottom: 9px solid #085c24 !important;
 }
 
